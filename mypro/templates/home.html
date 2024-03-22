@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+{%include 'header.html' %}
+<html>
+<head>
+    <style>
+    .animated-button {
+        position: relative;
+        display: inline-block;
+        padding: 12px 24px;
+        border: none;
+        font-size: 16px;
+        background-color: inherit;
+        border-radius: 100px;
+        font-weight: 600;
+        color: black40;
+        box-shadow: 2px #00FFFF;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+      }
+      
+      .animated-button span:last-child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #2196F3;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+      }
+      
+      .animated-button span:first-child {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .animated-button:hover {
+        box-shadow: 0 0 0 5px #2195f360;
+        color: #ffffff;
+      }
+      
+      .animated-button:active {
+        scale: 0.95;
+      }
+      
+      .animated-button:hover span:last-child {
+        width: 150px;
+        height: 150px;
+        opacity: 1;
+      }
+      .welcome_text{
+        font-size:20px;
+        font-family:Arial,Helvetica,sans-serif;
+        font-weight:bold;
+    
+    }
+    .img1{
+      position: absolute;
+      left: 140px;
+    }
+
+    </style>    
+  {% comment %} <link rel="stylesheet" type="text/css" href="{%static 'backend/static/css/index.css' %}"> {% endcomment %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div id="conntent-wrapper" class="mt-4" style="padding-top:1%;">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5" >
+                        <img class="img1" src="{% static "resumeimg.jpg" %}" width="350" heigth="150" >
+                    </div>
+                    <div class="col-md-7">
+                    <h1 class="text-primary">Build your Amazing CV</h1><br>
+                    <p style="color:black">CV refers to a detailed document that provides an overview of a person's education, work experience, skills, achievements, and other relevant information. CVs are commonly used in job applications, academic pursuits, and various professional settings.</p>
+                    <p class="welcome_text"> Here is a simple and quick way to create a new cv.</p>
+                      <p class="welcome_text"> Fill in the blank form , generate and download the CV in PDF form.</p>
+                       <a href="index"><button class="animated-button">
+                        <span>Get started&#8594;</span>
+                        <span></span>
+                      </button></a><br><br>
+                    
+                
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%include 'footer.html' %}
+</body>
+</html>
